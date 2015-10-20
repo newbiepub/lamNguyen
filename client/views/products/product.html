@@ -1,0 +1,262 @@
+<template name="product">
+    <div class="container">
+        <div style="visibility: visible; animation-name: fadeInUp;" class="page-section block-reinsurance wow fadeInUp animated">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-6 reinsurance-item">
+                    <div class="text-center reinsurance-image-container">
+                        <span class="reinsurance-icon">
+<span data-icon=""></span>
+                        </span>
+                    </div>
+                    <!-- /.text-center -->
+                    <p class="reinsurance-text">
+                        <span class="first">Free</span> <span class="second">Shipping</span>
+                    </p>
+                    <!-- /.reinsurance-text -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-3 col-sm-3 col-xs-6 reinsurance-item">
+                    <div class="text-center reinsurance-image-container">
+                        <span class="reinsurance-icon">
+<span data-icon=""></span>
+                        </span>
+                    </div>
+                    <!-- /.text-center -->
+                    <p class="reinsurance-text">
+                        <span class="first">Easy</span> <span class="second">Customize</span>
+                    </p>
+                    <!-- /.reinsurance-text -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-3 col-sm-3 col-xs-6 reinsurance-item">
+                    <div class="text-center reinsurance-image-container">
+                        <span class="reinsurance-icon">
+<span data-icon=""></span>
+                        </span>
+                    </div>
+                    <!-- /.text-center -->
+                    <p class="reinsurance-text">
+                        <span class="first">Easy</span> <span class="second">Takecare</span>
+                    </p>
+                    <!-- /.reinsurance-text -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-3 col-sm-3 col-xs-6 reinsurance-item">
+                    <div class="text-center reinsurance-image-container">
+                        <span class="reinsurance-icon">
+<span data-icon=""></span>
+                        </span>
+                    </div>
+                    <!-- /.text-center -->
+                    <p class="reinsurance-text">
+                        <span class="first">Lifetime</span> <span class="second">Support</span>
+                    </p>
+                    <!-- /.reinsurance-text -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.block reinsurance -->
+        <div style="visibility: visible; animation-name: fadeInUp;" class="page-section wow fadeInUp animated">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="section-info">
+                        <h3 class="section-title text-md-center">Recent Bully</h3>
+                        <p class="section-subtitle text-md-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                        <div class="controls clearfix hidden-xs hidden-sm">
+                            <a href="#" data-target="#recent-items-carousel" class="btn btn-primary pull-left owl-prev"><span data-icon="#"></span></a>
+                            <a href="#" data-target="#recent-items-carousel" class="btn btn-primary pull-right owl-next"><span data-icon="$"></span></a>
+                        </div>
+                        <!-- /.controls -->
+                    </div>
+                    <!-- /.section-info -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-xs-2 col-sm-2 hidden-md hidden-lg no-padding">
+                            <div class="controls text-right">
+                                <a href="#" data-target="#recent-items-carousel" class="btn btn-primary owl-prev"><span data-icon="#"></span></a>
+                            </div>
+                            <!-- /.controls -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
+                            <div id="recent-items-carousel" class="grid-view home-owl-carousel owl-carousel owl-theme">
+                                {{#each newProducts}}
+                                <div class="owl-item">
+                                    <div class="product-item-column">
+                                        <div class="product-item-grid-view">
+                                            <div class="product-item">
+                                                <div class="product-image">
+                                                    <a href="{{pathFor route='post'}}">
+                                                        <img data-pagespeed-loaded="1" src="{{image.url}}" alt="Product" class="center-block img-responsive" pagespeed_url_hash="3005039809" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" pagespeed_lsc_url="http://demo2.transvelo.in/html/kybully/assets/images/blank.gif" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)" height="202" width="262">
+                                                    </a>
+                                                </div>
+                                                <!-- /.product-image -->
+                                                <div class="product-detail text-md-center">
+                                                    <h3 class="product-name"><a href="index.php?page=detail">{{title}}</a></h3>
+                                                    <p class="product-price"><span class="price">{{price}}</span></p>
+                                                </div>
+                                                <!-- /.product-detail -->
+                                            </div>
+                                            <!-- /.product-item -->
+                                        </div>
+                                        <!-- /.product-item-grid-view -->
+                                    </div>
+                                </div>
+                                {{/each}}
+
+                            </div>
+                            <!-- /#recent-items-carousel -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-2 col-sm-2 hidden-md hidden-lg no-padding">
+                            <div class="controls text-left">
+                                <a href="#" data-target="#recent-items-carousel" class="btn btn-primary owl-next"><span data-icon="$"></span></a>
+                            </div>
+                            <!-- /.controls -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.recent section -->
+        <div style="visibility: visible; animation-name: fadeInUp;" class="page-section wow fadeInUp animated">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="section-info">
+                        <h3 class="section-title text-md-center">Popular</h3>
+                        <p class="section-subtitle text-md-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</p>
+                        <div class="controls clearfix hidden-xs hidden-sm">
+                            <a href="#" data-target="#popular-items-carousel" class="btn btn-primary pull-left owl-prev"><span data-icon="#"></span></a>
+                            <a href="#" data-target="#popular-items-carousel" class="btn btn-primary pull-right owl-next"><span data-icon="$"></span></a>
+                        </div>
+                        <!-- /.controls -->
+                    </div>
+                    <!-- /.section-info -->
+                </div>
+                <!-- /.col-md-3 -->
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-xs-2 col-sm-2 hidden-md hidden-lg no-padding">
+                            <div class="controls text-right">
+                                <a href="#" data-target="#popular-items-carousel" class="btn btn-primary owl-prev"><span data-icon="#"></span></a>
+                            </div>
+                            <!-- /.controls -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
+                            <div id="popular-items-carousel" class="grid-view home-owl-carousel owl-carousel owl-theme">
+
+                                {{#each popular}}
+                                <div class="owl-item">
+                                    <div class="product-item-column">
+                                        <div class="product-item-grid-view">
+                                            <div class="product-item">
+                                                <div class="product-image">
+                                                    <a href="{{pathFor route='post'}}">
+                                                        <img data-pagespeed-loaded="1" src="{{image.url}}" alt="Product" class="center-block img-responsive" pagespeed_url_hash="3005039809" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" pagespeed_lsc_url="http://demo2.transvelo.in/html/kybully/assets/images/blank.gif" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)" height="202" width="262">
+                                                    </a>
+                                                </div>
+                                                <!-- /.product-image -->
+                                                <div class="product-detail text-md-center">
+                                                    <h3 class="product-name"><a href="{{pathFor route='post'}}">{{title}}</a></h3>
+                                                    <p class="product-price"><span class="price">{{price}}</span></p>
+                                                </div>
+                                                <!-- /.product-detail -->
+                                            </div>
+                                            <!-- /.product-item -->
+                                        </div>
+                                        <!-- /.product-item-grid-view -->
+                                    </div>
+                                </div>
+                                {{/each}}
+                                <!-- /.product-item-column -->
+                                <!-- /.product-item-column -->
+                                <!-- /.product-item-column -->
+                                <!-- /.product-item-column -->
+                                <!-- /.product-item-column -->
+                                <!-- /.product-item-column -->
+                                <!-- /.product-item-column -->
+                                <!-- /.product-item-column -->
+                            </div>
+                            <!-- /#popular-items-carousel -->
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-xs-2 col-sm-2 hidden-md hidden-lg no-padding">
+                            <div class="controls text-left">
+                                <a href="#" data-target="#popular-items-carousel" class="btn btn-primary owl-next"><span data-icon="$"></span></a>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.col-md-9 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.popular section -->
+        <div class="row">
+<!--
+                <div class="page-section testimonials-section">
+                    <h3 class="section-title text-md-center">Testimonials</h3>
+                    <div class="list-unstyled list-testimonials row">
+                        <div class="col-md-3 col-sm-3 col-xs-6 reinsurance-item">
+                            <div class="text-center reinsurance-image-container">
+                                <span class="reinsurance-icon">
+<span data-icon=""></span>
+                                </span>
+                            </div>
+
+                            <p class="reinsurance-text">
+                                <span class="first">Free</span> <span class="second">Shipping</span>
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+-->   {{#each posts}}
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                    <li class='allProduct' style="background: url({{image.url}}) center center; background-size:cover;">
+                        <figure>
+                          <figcaption>
+                            <a href="{{pathFor route='post'}}">{{title}}</a>
+                            <p class="summary">
+                              {{summary}}
+                            </p>
+                            <div class='price'>
+                              <p>Price: {{price}}</p>
+                             </div>
+                          </figcaption>
+                        </figure>
+                    </li>
+                </div>
+
+                {{/each}}
+                <!-- /.page-section -->
+            <!-- /.testimonials -->
+            <!--
+            <div style="visibility: visible; animation-name: fadeInUp;" class="col-md-8 wow fadeInUp animated">
+                <div class="page-section videos-section">
+                    <div class="section-header">
+                        <a href="#" class="pull-right hidden-xs hidden-sm">More Videos</a>
+                        <h3 class="section-title text-md-center">Videos</h3>
+                    </div>
+
+                    <iframe id="video-player" class="video-player full-width" style="border:0px;" src="//player.vimeo.com/video/19376057" height="385" width="685"></iframe>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+-->
+            <!-- /.video section -->
+        </div>
+    </div>
+</template>

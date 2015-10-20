@@ -1,0 +1,22 @@
+<template name="commentEdit">
+    <form class="main">
+        <div class="control-group">
+            <label class="control-label" for="body">Content</label>
+            <div class="controls">
+                <textarea name="body"></textarea>
+                <span class="help-block">{{errorMessage 'body'}}</span>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <input type="submit" value="Submit" class="btn btn-primary submit" />
+            </div>
+        </div>
+        <hr/>
+        <div class="control-group">
+            <div class="controls">
+                <a class="btn btn-danger delete" href="#">Delete Comment</a>
+            </div>
+        </div>
+    </form>
+</template>

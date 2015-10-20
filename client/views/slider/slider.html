@@ -1,0 +1,32 @@
+<template name="slider">
+    <div id="hero">
+        <div id="owl-main" class="owl-carousel home-page-carousel height-lg owl-inner-nav owl-ui-lg owl-theme">
+                    {{#each posts}}
+                    <div class="owl-item">
+                        <div class="item" style="background-image: url({{image.url}});">
+                            <div class="container">
+                                <div class="caption vertical-center text-center">
+                                    <div class="big-text fadeInDown-1">
+                                        {{title}}
+                                    </div>
+                                    <div class="fadeInDown-2 text hidden-xs">
+                                        {{summary}}
+                                    </div>
+                                    <div class="button-holder fadeInDown-3">
+                                        <a class="btn uppercase strong btn-secondary btn-add-to-cart btn-action" href="#">Add To Cart</a>
+                                    </div>
+                                    <!-- /.button-holder -->
+                                </div>
+                                <!-- /.caption -->
+                            </div>
+                            <!-- /.container -->
+                        </div>
+                    </div>
+                    {{/each}}
+            </div>
+            <!-- /.item -->
+            <!-- /.item -->
+            <!-- /.item -->
+        </div>
+        <!-- /.owl-carousel -->
+</template>

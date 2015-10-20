@@ -1,0 +1,19 @@
+<template name="other_post">
+	<h3 class="tieude">Bài viết cùng chuyên mục</h3>
+    <div class="line_4"></div>
+    <div class="row">
+        <ul class="box-news-3">
+            {{#each posts}}
+            <div class="col-md-3 col-sm-4">
+                <li class="clearfix">
+                    <div class="pic hover01 column"> <a href="#"><figure><img class="img-responsive" src="{{image.url}}"/></figure></a></div>
+                    <div class="text">
+                        <a class="title" href="{{ pathFor route='post' }}">{{title}}</a>
+                        <p class="view">{{viewsCount}}</p>
+                    </div>
+                </li>
+            </div>
+            {{/each}}
+        </ul>
+    </div>
+</template>

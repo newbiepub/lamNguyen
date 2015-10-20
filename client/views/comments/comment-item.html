@@ -1,0 +1,16 @@
+<template name="commentItem">
+    <ul class="comment-item">
+        <li>
+        <h4>
+            <span class="author">{{getCreator.profile.name}}</span>
+            <span class="date">on {{ createdAt}}</span>
+        </h4>
+        <p>{{{body}}}</p>
+        {{#if image }}
+        <img src="{{image.url}}">
+        {{/if}}
+        {{#if ownComment}}<a class="edit" href="{{pathFor 'commentEdit'}}">Edit</a>{{/if}}
+    </li>
+
+    </ul>
+</template>

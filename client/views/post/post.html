@@ -1,0 +1,52 @@
+<template name="post">
+    <div id="main-post">
+    <div class="category">
+       <!-- Main news -->
+        <div class="main-news">
+            <div class="block_breadcrumbs">
+                <div class="block-tt"><a href="#">{{ category }}</a> <span>{{post.title}}</span></div>
+
+            </div>
+            <!-- Post detail-->
+            <div class="post-detail">
+                <div class="pic">
+                    <img src="{{ post.image.url }}"/>
+                </div>
+                <h1 class="title">{{post.title}}</h1>
+                <p class="sumary">{{post.summary}}</p>
+                <div class="info">
+                    <div class="view"> <p>{{ post.viewsCount }}</p></div>
+                </div>
+                <div class="content-post">
+                    {{{ post.body }}}
+                    <div>Chia sẻ: {{> btnSocial}}</div>
+                </div>
+            </div>
+            <!-- <div class="rate">
+                {{> rate}}
+            </div> -->
+            <!-- End post detail-->
+            <!-- End remember news -->
+            <div class="line_2" style="margin-bottom: 0;"></div>
+            <!-- Comment  -->
+            <div class="comment-fb">
+                {{#each comments}} {{> commentItem}} {{/each}}
+                <h3 class="title">Bình luận</h3>
+               <!-- <div class="fb-comments" data-href="http://localhost:3000/posts/" data-width="100%" data-numposts="5"></div>-->
+                {{#if currentUser}} {{> commentSubmit}} {{else}}
+                    <p>Hãy Đăng Nhập Để Bình Luận</p>
+                {{/if}}
+            </div>
+            <div class="line_2"></div>
+            <!--Remember news -->
+            <div class="remember-news">
+                {{> other_post}}
+            </div>
+
+            <!-- End comment-->
+        </div>
+        <!--End main news -->
+        </div>
+
+    </div>
+</template>

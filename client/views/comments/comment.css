@@ -1,0 +1,37 @@
+.comment-item
+{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.comment-item li
+{
+	padding: 10px;
+	border: 1px #ededed solid;
+	background-color: #fefefe;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+.comment-item h4
+{
+	font-size: 15px;
+	color: #343434;
+	font-weight: bold;
+}
+.comment-item h4 .date
+{
+	font-size: 12px;
+	color: #666;
+	font-style: italic;
+	font-weight: normal;
+}
+.comment-item .edit
+{
+	text-align: right;
+	display: block;
+	color: #343434;
+	font-style: italic;
+	text-decoration: underline;
+}
