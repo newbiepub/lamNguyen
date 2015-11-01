@@ -7,6 +7,11 @@ Template.commentItem.helpers({
     },
     ownComment:function(){
         return this.createdBy === Meteor.userId();
+    },
+    getCreator: function () {
+        return Meteor.users.findOne({
+            _id: this.createdBy
+        });
     }
 });
 Template.commentItem.onRendered(function(){

@@ -71,3 +71,101 @@ CommunityRole.allow('collections.posts.showRemove', function(doc) {
   return doc.createdBy == this.userId;
 });
 
+
+/* Comments -----------------------------------------------------------*/
+
+CommunityRole.allow('collections.comments.index', true);
+
+/**
+ * And we will make that the users only see their posts in the index
+ */
+CommunityRole.helper('collections.comments.indexFilter', function() {
+  return { createdBy: this.userId };
+})
+
+/**
+ * Users can create posts
+ */
+CommunityRole.allow('collections.comments.insert', true);
+
+/**
+ * Users can update posts
+ */
+CommunityRole.allow('collections.comments.update', function(userId, doc, fields, modifier) {
+  return doc.createdBy === userId; // Will be allowed to edit his own posts
+});
+
+/**
+ * Users can remove posts
+ */
+CommunityRole.allow('collections.comments.remove', function(userId, doc) {
+  return doc.createdBy === userId; // Will be allowed to edit his own posts
+});
+
+/**
+ * Users can see the create post button
+ */
+CommunityRole.allow('collections.comments.showCreate', true);
+
+/**
+ * Users can see the update post button if they created the doc
+ */
+CommunityRole.allow('collections.comments.showUpdate', function(doc) {
+  return doc.createdBy == this.userId;
+});
+
+/**
+ * Users can see the delete post button if they created the doc
+ */
+CommunityRole.allow('collections.comments.showRemove', function(doc) {
+  return doc.createdBy == this.userId;
+});
+
+//--------Carts----------------------------------------------------------
+
+CommunityRole.allow('collections.carts.index', false);
+
+/**
+ * And we will make that the users only see their posts in the index
+ */
+CommunityRole.helper('collections.carts.indexFilter', function() {
+  return { createdBy: this.userId };
+})
+
+/**
+ * Users can create posts
+ */
+CommunityRole.allow('collections.carts.insert', true);
+
+/**
+ * Users can update posts
+ */
+CommunityRole.allow('collections.carts.update', function(userId, doc, fields, modifier) {
+  return doc.createdBy === userId; // Will be allowed to edit his own posts
+});
+
+/**
+ * Users can remove posts
+ */
+CommunityRole.allow('collections.carts.remove', function(userId, doc) {
+  return doc.createdBy === userId; // Will be allowed to edit his own posts
+});
+
+/**
+ * Users can see the create post button
+ */
+CommunityRole.allow('collections.carts.showCreate', true);
+
+/**
+ * Users can see the update post button if they created the doc
+ */
+CommunityRole.allow('collections.carts.showUpdate', function(doc) {
+  return doc.createdBy == this.userId;
+});
+
+/**
+ * Users can see the delete post button if they created the doc
+ */
+CommunityRole.allow('collections.carts.showRemove', function(doc) {
+  return doc.createdBy == this.userId;
+});

@@ -22,5 +22,5 @@ Template.slider.rendered = function(){
             singleItem: true,
             autoHeight: true,
         });
-    },3000);
+    },5000);
 };

@@ -1,0 +1,75 @@
+<template name="carts">
+    <div class="container">
+        <!-- ========================================= CONTENT ========================================= -->
+        <h2 class="page-title text-md-center">Shopping Cart - {{cartItems}} món</h2>
+        <p class="page-subtitle text-md-center">{{cartDesc}}</p>
+        <div class="page-section">
+            <ul class="order-steps nav nav-pills nav-justified">
+                <li class="active"><a href="{{pathFor route='carts'}}">Review Cart</a></li>
+                <li><a href="{{pathFor route='home'}}">Confirm Payment</a></li>
+                <li><a href="#">Finish</a></li>
+            </ul><!-- /.order steps -->
+        </div><!-- /.page section -->
+        <div class="page-section">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-responsive">
+                        <table class="table table-cart-summary">
+                            <thead>
+                            <tr>
+                                <th>Sản Phẩm</th>
+                                <th>Mô tả</th>
+                                <th>Giá Sản Phẩm</th>
+                                <th></th>
+                            </tr><!-- /tr -->
+                            </thead><!-- /thead -->
+                            <tfoot>
+                            <tr>
+                                <td colspan="2">
+                                    <form role="form" class="form-coupon-code">
+                                        <label class="control-label">Coupon Code</label>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="Not Available" autocomplete="off" type="text" disabled>
+<span class="input-group-btn">
+<button class="btn btn-primary" type="button">OK</button>
+</span>
+                                        </div>
+                                    </form>
+                                </td>
+                                <td colspan="2">
+                                    <p class="final-total text-right">
+                                        <span class="final-total-text">Tổng Cộng:</span>
+                                        <span class="final-total-value">{{formatCurrency total}}</span>
+                                    </p>
+                                </td>
+                                <td></td>
+                            </tr><!-- /tr -->
+                            </tfoot><!-- /tfoot -->
+                            <tbody>
+                            {{#each posts}}
+                            <tr>
+                                <td colspan="2">
+                                    <div class="media">
+                                        <a class="pull-left" href="{{pathFor route='post'}}"><img data-pagespeed-loaded="1" src="{{image.url}}" alt="Puppy Bully" class="media-object" pagespeed_url_hash="214980113" data-pagespeed-onload="pagespeed.CriticalImages.checkImageForCriticality(this);" onload="var elem=this;if (this==window) elem=document.body;elem.setAttribute('data-pagespeed-loaded', 1)" height="112" width="112"></a>
+                                        <div class="media-body">
+                                            <h4 class="product-title">{{title}}</h4>
+                                            <p class="price">Giá : {{formatCurrency price}}</p>
+                                        </div><!-- /.media-body -->
+                                    </div><!-- /.media -->
+                                </td>
+                                <td>
+                                    <span class="unit-price">{{formatCurrency price}}</span>
+                                </td>
+                                <td><a id="btn-remove" href="#" class="cart-item-remove"><span data-icon="M"></span></a></td>
+                            </tr>
+                            {{/each}}
+                            <!-- /tr -->
+                            </tbody><!-- /tbody -->
+                        </table><!-- /.table -->
+                    </div><!-- /.table responsive -->
+                </div>
+            </div><!-- /.row-->
+        </div><!-- /.page-section -->
+        <!-- ========================================= CONTENT : END ========================================= -->
+    </div>
+</template>

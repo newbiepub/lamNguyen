@@ -7,10 +7,16 @@ Template.product.helpers({
        return Posts.find({},{sort:{createdAt:-1},limit: 10});
    },
     popular:function(){
-        return Posts.find({viewsCount:{$gt:50}},{limit:10});
+        return Posts.find({viewsCount:{$gt:10}},{limit:10});
     },
     posts:function(){
      return Posts.find({},{sort:{createdAt: -1}});
+    },
+    popularDesc : function () {
+        return Descriptions.findOne().popular;
+    },
+    recentDesc:function(){
+        return Descriptions.findOne().recent;
     }
 });
 Template.product.rendered = function () {
@@ -45,5 +51,5 @@ Template.product.rendered = function () {
         //            goToFirstSpeed: 2000,
         //            autoHeight: true,
         //        });
-    }, 3000);
+    }, 5000);
 };

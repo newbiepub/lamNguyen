@@ -1,0 +1,187 @@
+/*sidebar*/
+    /*Subscribe*/
+.subscribe
+{
+    margin-bottom: 20px;
+}
+.subscribe .tieude, .popular-post .tieude, .calendar .tieude, .video .tieude, .new-letter .tieude
+{
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 15px;
+    display: block;
+}
+.block_subscribe
+{
+    padding: 15px 10px 10px 10px;
+    border: 1px #ededed solid;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.block_subscribe .service
+{
+    float: left;
+    margin-right: 15px;
+}
+.block_subscribe .service a:hover
+{
+    text-decoration: none;
+}
+.block_subscribe .service .fb
+{
+    background: url("img/icon_fb_1.png") left bottom no-repeat;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.block_subscribe .service .num {
+    color: #343434;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 13px;
+    padding-bottom: 2px;
+    padding-top: 1px;
+}
+.block_subscribe .service .people {
+    color: #939393;
+    font-size: 10px;
+    line-height: 10px;
+}
+/*Popular post*/
+.popular-post ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.popular-post .box-news-1 li
+{
+    border-bottom: 1px #ededed solid;
+    margin-bottom: 15px;
+}
+.popular-post .box-news-1 li a
+{
+    font-size: 13px;
+}
+/*Calendar*/
+.calendar
+{
+    margin-bottom: 20px;
+}
+.pick_date
+{
+    border:1px #ededed solid;
+    padding: 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.picker-switch
+{
+    color: #F24328;
+    font-size: 15px;
+}
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover
+{
+    background-color: #F24328!important;
+}
+
+/*Video*/
+.video ul
+{
+    margin: 0;
+    padding: 0;
+}
+.video ul li
+{
+    margin-bottom: 20px;
+}
+.box-video .left
+{
+    width: 85%;
+    float: left;
+    border-right: 1px #ededed solid;
+    padding-right: 15px;
+}
+.box-video .text .date
+{
+    margin-bottom: 0;
+}
+.box-video .right
+{
+    float: right;
+    padding-left: 15px;
+    text-align: center;
+}
+
+.box-video .pic
+{
+    border: 4px solid #f2f2f2;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+/*End video*/
+/*New letter*/
+.new-letter 
+{
+    margin-top: 40px;
+}
+.new-letter .tieude img
+{
+    height: 20px;
+    width: auto;
+    margin-top: -5px;
+    margin-left: 5px
+}
+.new-letter .field
+{
+    float: left;
+    height: 32px;
+    overflow: hidden;
+    width: 75%;
+}
+.new-letter form
+{
+    border: 4px #ededed solid;
+    height: 40px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.new-letter .field input
+{
+    width: 100%;
+    height: 32px;
+    border: none;
+    padding-left: 10px;
+    color: #b5b5b5;
+    font-size: 11px;
+}
+.new-letter .button
+{
+    background-color: #F2472D;
+    background-position: right 0;
+    background-repeat: no-repeat;
+    border: 0 none;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 1em;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.14);
+    text-transform: uppercase;
+    width: 25%;
+    border-left: 3px #ededed solid;
+}
+.new-letter .button:hover
+{
+    background-color: #5BA6BB;
+    transition: all .2s ease-in-out 0s;
+}

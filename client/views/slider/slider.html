@@ -3,17 +3,17 @@
         <div id="owl-main" class="owl-carousel home-page-carousel height-lg owl-inner-nav owl-ui-lg owl-theme">
                     {{#each posts}}
                     <div class="owl-item">
-                        <div class="item" style="background-image: url({{image.url}});">
+                        <div class="item" style="background-image: url({{image.url}});background-size:cover;">
                             <div class="container">
                                 <div class="caption vertical-center text-center">
                                     <div class="big-text fadeInDown-1">
                                         {{title}}
                                     </div>
                                     <div class="fadeInDown-2 text hidden-xs">
-                                        {{summary}}
+                                        Giá: {{formatCurrency price}}
                                     </div>
                                     <div class="button-holder fadeInDown-3">
-                                        <a class="btn uppercase strong btn-secondary btn-add-to-cart btn-action" href="#">Add To Cart</a>
+                                        <a class="btn uppercase strong btn-secondary btn-add-to-cart btn-action" href="{{pathFor route='post'}}">Chi tiết</a>
                                     </div>
                                     <!-- /.button-holder -->
                                 </div>

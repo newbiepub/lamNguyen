@@ -3,6 +3,10 @@
  * Orion will automatically create the corresponding form.
  */
 Posts.attachSchema(new SimpleSchema({
+    productId:{
+        type:String,
+        label:"Product code"
+    },
   title: {
     type: String,
     label: orion.helpers.getTranslation('posts.schema.title') // We use this function to make i18n work in autoform
@@ -33,6 +37,15 @@ Posts.attachSchema(new SimpleSchema({
   body: orion.attribute('froala', {
       label: orion.helpers.getTranslation('posts.schema.body') // We use this function to make i18n work in autoform
   }),
+    category:orion.attribute("hasOne",{
+       type:String,
+        label:"Loại Sản Phẩm",
+        optional:false
+    },{
+        collection: Categories,
+        titleField: "name",
+        publicationName:"CategoriesPulishName"
+    }),
   viewsCount:{
     label:"Views",
     optional:true,

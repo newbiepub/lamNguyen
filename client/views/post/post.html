@@ -1,52 +1,69 @@
 <template name="post">
-    <div id="main-post">
-    <div class="category">
-       <!-- Main news -->
-        <div class="main-news">
-            <div class="block_breadcrumbs">
-                <div class="block-tt"><a href="#">{{ category }}</a> <span>{{post.title}}</span></div>
-
-            </div>
-            <!-- Post detail-->
-            <div class="post-detail">
-                <div class="pic">
-                    <img src="{{ post.image.url }}"/>
-                </div>
-                <h1 class="title">{{post.title}}</h1>
-                <p class="sumary">{{post.summary}}</p>
-                <div class="info">
-                    <div class="view"> <p>{{ post.viewsCount }}</p></div>
-                </div>
-                <div class="content-post">
-                    {{{ post.body }}}
-                    <div>Chia sẻ: {{> btnSocial}}</div>
-                </div>
-            </div>
-            <!-- <div class="rate">
-                {{> rate}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-8" style="border-right: 1px #ededed solid;">
+                <div class="main-content" id="main-content">
+                    <div id="main-post">
+                        <div class="category">
+                            <!-- Main news -->
+                            <div class="block_breadcrumbs">
+                                <div class="block-tt"><a href="#">{{ category }}</a> <span>{{post.title}}</span></div>
+                            </div>
+                            <!-- Post detail-->
+                            <div class="post-detail">
+                                <div class="pic">
+                                    <img src="{{ post.image.url }}" />
+                                </div>
+                                <h1 class="title">{{post.title}}</h1>
+                                <p class="sumary">{{post.summary}}</p>
+                                <div class="info">
+                                    <div class="view">
+                                        <p>{{ post.viewsCount }}</p>
+                                    </div>
+                                </div>
+                                <div class="content-post">
+                                    {{{ post.body }}}
+                                    <div>Chia sẻ: {{> btnSocial}}</div>
+                                </div>
+                                <div>
+                                    {{#if currentUser}}
+                                    <a id="add-carts" class="btn uppercase strong btn-secondary btn-add-to-cart btn-action">Thêm Vào Giỏ Hàng</a>
+                                    {{else}}
+                                        <span class="help-block">Hãy đăng nhập để thêm vào giỏ hàng</span>
+                                    {{/if}}
+                                </div>
+                            </div>
+                            <!-- <div class="rate">
             </div> -->
-            <!-- End post detail-->
-            <!-- End remember news -->
-            <div class="line_2" style="margin-bottom: 0;"></div>
-            <!-- Comment  -->
-            <div class="comment-fb">
-                {{#each comments}} {{> commentItem}} {{/each}}
-                <h3 class="title">Bình luận</h3>
-               <!-- <div class="fb-comments" data-href="http://localhost:3000/posts/" data-width="100%" data-numposts="5"></div>-->
-                {{#if currentUser}} {{> commentSubmit}} {{else}}
-                    <p>Hãy Đăng Nhập Để Bình Luận</p>
-                {{/if}}
-            </div>
-            <div class="line_2"></div>
-            <!--Remember news -->
-            <div class="remember-news">
-                {{> other_post}}
-            </div>
+                            <!-- End post detail-->
+                            <!-- End remember news -->
+                            <div class="line_2" style="margin-bottom: 0;"></div>
+                            <!-- Comment  -->
+                            <div class="comment-fb">
+                                {{#each comments}} {{> commentItem}} {{/each}}
+                                <h3 class="title">Bình luận</h3>
+                                <!-- <div class="fb-comments" data-href="http://localhost:3000/posts/" data-width="100%" data-numposts="5"></div>-->
+                                {{#if currentUser}} {{> commentSubmit}} {{else}}
+                                <p>Hãy Đăng Nhập Để Bình Luận</p>
+                                {{/if}}
+                            </div>
+                            <div class="line_2"></div>
+                            <!--Remember news -->
+                            <div class="remember-news">
+                                {{> other_post}}
+                            </div>
 
-            <!-- End comment-->
+                            <!-- End comment-->
+                        </div>
+                        <!--End main news -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4">
+                <div class="sidebar">
+                    {{> sidebar}}
+                </div>
+            </div>
         </div>
-        <!--End main news -->
-        </div>
-
     </div>
 </template>

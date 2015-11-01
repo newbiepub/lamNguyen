@@ -1,0 +1,18 @@
+<template name="popular_post">
+	<div class="tieude">Những Sản Phẩm Phổ Biến</div>
+    <ul class="box-news-1">
+        {{# each posts }}
+            <li class="clearfix">
+                <div class="pic"> <a href="{{ pathFor route='post' }}"><img src="{{ image.url}}"/></a></div>
+                <div class="text">
+                    <a class="title" href="{{ pathFor route='post' }}">{{ title }}</a>
+                    <p class="date">
+                        {{createdAt}}
+                    </p>
+                    <p class="view">{{ views }}</p>
+                </div>
+            </li>
+        {{/ each }}
+
+    </ul>
+</template>

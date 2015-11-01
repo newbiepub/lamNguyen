@@ -1,0 +1,13 @@
+<template name="category">
+    <div class="container">
+        <h2>Sản Phẩm</h2>
+        <ul class="blocks">
+            {{#each posts}}
+            <li id="clicked_item img-responsive" style="background: url({{image.url}}) center center; background-size:cover;">{{trimString title}}
+                <br><em>Giá: {{formatCurrency price}}</em>
+                <div style="background: url({{image.url}}) center center; background-size:cover;" class="popup"><span><h3>{{title}}</h3>{{summary}}</span></div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</template>

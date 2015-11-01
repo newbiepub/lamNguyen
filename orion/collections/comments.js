@@ -39,14 +39,6 @@ Comments = new orion.collection('comments', {
  * collection to easily get the user
  */
 
-Comments.helpers({
-    getCreator: function () {
-        return Meteor.users.findOne({
-            _id: this.createdBy
-        });
-    }
-});
-
 Meteor.methods({
     commentInsert: function(commentAttributes) {
         var user = Meteor.user();
@@ -54,7 +46,7 @@ Meteor.methods({
         // ensure the user is logged in
         if (!post)
             throw new Meteor.Error(422, 'You must comment on a post');
-        comment = _.extend(_.pick(commentAttributes, 'postId', 'body'), {
+        var comment = _.extend(_.pick(commentAttributes, 'postId', 'body'), {
             createdBy: user._id,
             createdAt: new Date().getTime()
         });
