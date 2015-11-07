@@ -57,5 +57,8 @@ Meteor.methods({
         var index = items.indexOf(currentCommentId);
         items.splice(index,1);
         Carts.update({createdBy: Meteor.userId()},  {$set: {postId: items,total:newCart}}, {validate: false });
+    },
+    cartUpdateNumber: function(phoneNumber){
+        Carts.update({createdBy: Meteor.userId()},  {$set: {phoneNum: phoneNumber}}, {validate: false });
     }
 })

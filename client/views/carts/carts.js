@@ -24,7 +24,10 @@ Template.carts.helpers({
     },
     cartDesc: function(){
         return Descriptions.findOne().cartsdesc;
-    }
+    },
+    phone: function () {
+        return Carts.findOne({createdBy:Meteor.userId()}).phoneNum;
+    },
 
 });
 Template.carts.events({
@@ -33,5 +36,12 @@ Template.carts.events({
         if (confirm("Bạn có muốn xóa sản phẩm này")) {
             Meteor.call('delCarts',this._id);
         }
+    },
+    'submit form':function(e){
+        var val = $(e.target).find('[name=phoneNumber]').val();
+        Meteor.call('cartUpdateNumber',val,function(err){
+            if(err)
+                console.log(err);
+        });
     }
 })

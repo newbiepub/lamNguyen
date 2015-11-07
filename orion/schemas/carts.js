@@ -16,6 +16,11 @@ Carts.attachSchema(new SimpleSchema({
         label:"Tong Gia",
         optional:true
     },
+    phoneNum:{
+        type:String,
+        label:"Số đt khách hàng",
+        optional:true
+    },
     createdBy: orion.attribute('createdBy'),
     createdAt: orion.attribute('createdAt')
 }));
