@@ -42,14 +42,14 @@ Template.product.rendered = function () {
             return false;
         });
 
-        //        $('#popular-items-carousel').owlCarousel({
-        //            items:4,
-        //            autoPlay: 3000,
-        //            stopOnHover: true,
-        //            navigation: false,
-        //            pagination: false,
-        //            goToFirstSpeed: 2000,
-        //            autoHeight: true,
-        //        });
-    }, 5000);
+                //$('#popular-items-carousel').owlCarousel({
+                //    items:4,
+                //    autoPlay: 3000,
+                //    stopOnHover: true,
+                //    navigation: false,
+                //    pagination: false,
+                //    goToFirstSpeed: 2000,
+                //    autoHeight: true,
+                //});
+    }, 3000);
 };
